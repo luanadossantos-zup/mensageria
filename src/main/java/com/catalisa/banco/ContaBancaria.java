@@ -19,7 +19,4 @@ public class ContaBancaria {
         }
     }
 
-    public double getSaldo() {
-        return saldo;
-    }
 }
