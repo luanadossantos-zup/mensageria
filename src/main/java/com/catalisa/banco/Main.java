@@ -19,12 +19,10 @@ public class Main {
         // ExecutorService para gerenciar concorrência
         ExecutorService executor = Executors.newFixedThreadPool(3);
 
-        // Processa múltiplas transações em paralelo
         executor.execute(() -> processador.processarTransacao(conta, "saque", 200.00));
         executor.execute(() -> processador.processarTransacao(conta, "deposito", 500.00));
         executor.execute(() -> processador.processarTransacao(conta, "saque", 800.00));
 
-        // Encerra o executor
         executor.shutdown();
     }
 }
